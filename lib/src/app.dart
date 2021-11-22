@@ -10,8 +10,24 @@ class RegistroForm extends StatefulWidget {
 class _RegistroFormState extends State<RegistroForm> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('data'),
+    return Scaffold(
+      backgroundColor: Colors.blueGrey[100],
+      body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 90.0),
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 100.0,
+                backgroundColor: Colors.grey,
+                backgroundImage: AssetImage('images/icono.png'),
+              ),
+              Text('Login')
+            ],
+          )
+        ],
+      ),
     );
   }
 }
