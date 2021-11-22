@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RegistroForm extends StatefulWidget {
+  // ignore: prefer_const_constructors_in_immutables
   RegistroForm({Key? key}) : super(key: key);
 
   @override
@@ -23,7 +24,10 @@ class _RegistroFormState extends State<RegistroForm> {
                 backgroundColor: Colors.grey,
                 backgroundImage: AssetImage('images/icono.png'),
               ),
-              Text('Login')
+              Text(
+                'Register',
+                style: TextStyle(fontFamily: 'nunito', fontSize: 20.0),
+              )
             ],
           )
         ],
