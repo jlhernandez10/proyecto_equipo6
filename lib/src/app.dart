@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class RegistroForm extends StatefulWidget {
-  // ignore: prefer_const_constructors_in_immutables
   RegistroForm({Key? key}) : super(key: key);
 
   @override
@@ -9,25 +8,54 @@ class RegistroForm extends StatefulWidget {
 }
 
 class _RegistroFormState extends State<RegistroForm> {
+  String _nombre;
+  String _email;
+  String _password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey[100],
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 90.0),
+        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 250.0),
         children: <Widget>[
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: 100.0,
-                backgroundColor: Colors.grey,
-                backgroundImage: AssetImage('images/icono.png'),
-              ),
               Text(
-                'Register',
-                style: TextStyle(fontFamily: 'nunito', fontSize: 20.0),
-              )
+                'Registro',
+                style: TextStyle(fontFamily: 'nunito', fontSize: 30.0),
+              ),
+              SizedBox(
+                width: 160.0,
+                height: 15.0,
+                child: Divider(color: Colors.blue[200]),
+              ),
+              TextField(
+                enableInteractiveSelection: false,
+                autofocus: true,
+                textCapitalization: TextCapitalization.characters,
+                decoration: InputDecoration(
+                    hintText: 'Full Name',
+                    labelText: 'User name',
+                    suffixIcon: Icon(Icons.verified_user),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0))),
+                onSubmitted: (valor) {
+                  _nombre = valor;
+                  print('El nombre es $_nombre');
+                },
+              ),
+              Divider(
+                height: 18.0,
+              ),
+              TextField(
+                  decoration: InputDecoration(
+                      hintText: 'Email',
+                      labelText: 'Email',
+                      suffixIcon: Icon(Icons.alternate_email),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0))))
             ],
           )
         ],
