@@ -6,18 +6,18 @@ import 'package:proyecto_equipo6/ui/pages/register.dart';
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // Este widget es la raiz de su aplicación.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Red Social',
+      title: 'Insight Artist',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
+        // Cuando navegue a la ruta "/", cree el FirstScreen widget.
         '/': (context) => const LoginPage(
               title: 'Login',
             ),

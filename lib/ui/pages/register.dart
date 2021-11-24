@@ -98,9 +98,9 @@ class _RegisterPageState extends State<RegisterPage> {
         onPressed: () {
           Navigator.pop(context);
         },
-        tooltip: 'Registrar',
+        tooltip: 'Insight Artist',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ), // Esta coma final hace que el formato automático sea más agradable para los métodos de compilación.
     );
   }
 }

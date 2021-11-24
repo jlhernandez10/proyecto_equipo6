@@ -65,9 +65,9 @@ class _LoginPageState extends State<LoginPage> {
         onPressed: () {
           Navigator.pushNamed(context, '/content');
         },
-        tooltip: 'Login',
+        tooltip: 'Insight Artist',
         child: const Icon(Icons.login),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ), // Esta coma final hace que el formato automático sea más agradable para los métodos de compilación.
     );
   }
 }
