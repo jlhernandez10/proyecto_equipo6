@@ -1,12 +1,6 @@
-/*import 'package:flutter/material.dart';
-import 'ui/app.dart';
-void main() {
-  runApp(const App());
-}*/
 import 'package:flutter/material.dart';
 //import 'package:get/get.dart';
-import 'package:proyecto_equipo6/ui/app.dart';
-//import 'proyecto_equipo6/domain/use_case/controllers/converter_controller.dart';
+import 'domain/use_case/controllers/converter_controller.dart';
 import 'ui/pages/myhome.dart';
 
 void main() {
