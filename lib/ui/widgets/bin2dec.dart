@@ -1,6 +1,6 @@
 import 'package:proyecto_equipo6/domain/use_case/controllers/converter_controller.dart';
 import 'package:flutter/material.dart';
-//import 'package:get/get.dart';
+import 'package:get/get.dart';
 
 class Bin2Dec extends StatelessWidget {
   const Bin2Dec({Key? key}) : super(key: key);

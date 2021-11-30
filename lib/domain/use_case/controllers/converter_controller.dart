@@ -1,5 +1,5 @@
 import 'package:proyecto_equipo6/domain/use_case/converter.dart';
-//import 'package:get/get.dart';
+import 'package:get/get.dart';
 
 class ConverterController extends GetxController {
   var _decimal = "0".obs;

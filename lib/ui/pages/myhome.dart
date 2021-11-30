@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:proyecto_equipo6/ui/widgets/converter.dart';
 
@@ -9,10 +8,10 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MisiónTIC 2022 GetX',
+      title: 'Uso de GetX',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('MisiónTIC 2022 - Flutter GetX'),
+          title: Text('Flutter GetX'),
         ),
         body: Center(
           child: Converter(),
