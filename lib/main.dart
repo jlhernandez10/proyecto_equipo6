@@ -1,11 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'domain/use_case/controllers/converter_controller.dart';
-import 'ui/pages/myhome.dart';
+import 'package:proyecto_equipo6/pages/register.dart';
+import 'package:proyecto_equipo6/routes.dart';
+import 'package:proyecto_equipo6/theme.dart';
 
-void main() {
-  // Implementa la inyección para instanciar nuestro controlador
-  Get.put(ConverterController());
-  // con el lazy put la instancia sólo se crea una vez que se necesita
-  runApp(App());
+void main() => runApp(new SprintApp());
+
+class SprintApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _SprintAppState();
+}
+
+class _SprintAppState extends State<SprintApp> {
+  Widget rootPage = RegisterPage();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Proyecto Insight Artist',
+      home: rootPage,
+      routes: buildAppRoutes(),
+      theme: buildAppTheme(),
+    );
+    // TODO: implement build
+    throw UnimplementedError();
+  }
 }
