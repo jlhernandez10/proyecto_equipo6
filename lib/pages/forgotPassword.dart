@@ -10,10 +10,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Forgot password'),
+        title: Text('Recuperar contraseña'),
       ),
       body: Center(
-        child: Text("Página de forgot password"),
+        child: Text("Página de recuperar contraseña"),
       ),
     );
     // TODO: implement build

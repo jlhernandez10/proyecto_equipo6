@@ -58,7 +58,7 @@ class _RegisterPageState extends State<RegisterPage> {
           onPressed: () {
             Navigator.of(context).pushNamed('/login');
           },
-          child: Text('I already have an account'),
+          child: Text('Ya tengo cuenta'),
         )
       ],
     );
