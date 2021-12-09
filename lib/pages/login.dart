@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                 FlatButton(
                   child: Text('Olvide mi contraseña'),
                   onPressed: () {
-                    Navigator.of(context).pushNamed('forgotpassword');
+                    Navigator.of(context).pushNamed('/forgotpassword');
                   },
                   textColor: Colors.blueGrey,
                 ),
