@@ -6,9 +6,9 @@ import 'package:proyecto_equipo6/pages/mainTabs.dart';
 
 Map<String, WidgetBuilder> buildAppRoutes() {
   return {
-    '/login': (BuildContext context) => new LoginPage(),
-    '/register': (BuildContext context) => new RegisterPage(),
-    '/forgotpassword': (BuildContext context) => new ForgotPasswordPage(),
-    //'/maintabs': (BuildContext context) => new MainTabsPage();
+    '/login': (BuildContext context) => LoginPage(),
+    '/register': (BuildContext context) => RegisterPage(),
+    '/forgotpassword': (BuildContext context) => ForgotPasswordPage(),
+    '/maintabs': (BuildContext context) => MainTabsPage(),
   };
 }
