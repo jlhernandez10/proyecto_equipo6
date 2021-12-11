@@ -1,5 +1,4 @@
 import 'dart:js';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_equipo6/behaviors/hiddenScrollBehavior.dart';
@@ -32,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
     try {
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: _email, password: _password);
-      //Navigator.of(context).pushReplacementNamed('/maintabs');
+      Navigator.of(context).pushReplacementNamed('/maintabs');
     } catch (e) {
       //Mensaje de error
     }
