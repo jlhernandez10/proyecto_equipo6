@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto_equipo6/pages/forgotPassword.dart';
-import 'package:proyecto_equipo6/pages/login.dart';
-import 'package:proyecto_equipo6/pages/register.dart';
-import 'package:proyecto_equipo6/pages/mainTabs.dart';
+import 'package:flutter/cupertino.dart';
+import 'pages/forgotPassword.dart';
+import 'pages/login.dart';
+import 'pages/register.dart';
 
 Map<String, WidgetBuilder> buildAppRoutes() {
   return {
-    '/login': (BuildContext context) => LoginPage(),
-    '/register': (BuildContext context) => RegisterPage(),
-    '/forgotpassword': (BuildContext context) => ForgotPasswordPage(),
-    '/maintabs': (BuildContext context) => MainTabsPage(),
+    '/login': (BuildContext context) => new LoginPage(),
+    '/register': (BuildContext context) => new RegisterPage(),
+    '/forgotpassword': (BuildContext context) => new ForgotPasswordPage(),
+    //'/maintabs': (BuildContext context) => new MainTabsPage();
   };
 }

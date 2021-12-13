@@ -1,10 +1,10 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:proyecto_equipo6/pages/settings.dart';
-import 'package:proyecto_equipo6/pages/todos.dart';
-import 'package:proyecto_equipo6/pages/todosArchive.dart';
+import 'package:flutter/cupertino.dart';
+import 'settings.dart';
+import 'todos.dart';
+import 'todosArchive.dart';
 
-class MainTabsPage extends StatelessWidget {
+class MainTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

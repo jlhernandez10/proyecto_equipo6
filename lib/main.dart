@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_equipo6/pages/register.dart';
-import 'package:proyecto_equipo6/routes.dart';
-import 'package:proyecto_equipo6/theme.dart';
+import 'routes.dart';
+import 'theme.dart';
 
 void main() => runApp(new SprintApp());
 

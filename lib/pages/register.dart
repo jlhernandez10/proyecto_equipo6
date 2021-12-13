@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_equipo6/behaviors/hiddenScrollBehavior.dart';
 
@@ -8,32 +8,8 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  final _formKey = GlobalKey<FormState>();
   late String _email;
   late String _password;
-  bool _isRegistering = false;
-  _register() async {
-    if (_isRegistering) return;
-    setState(() {
-      _isRegistering = true;
-    });
-    final form = _formKey.currentState;
-    if (!form!.validate()) {
-      setState(() {
-        _isRegistering = false;
-      });
-      return;
-    }
-    form.save();
-
-    try {
-      await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(email: _email, password: _password);
-      Navigator.of(context).pushReplacementNamed('/maintabs');
-    } catch (e) {
-      //Mensaje de error
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +23,6 @@ class _RegisterPageState extends State<RegisterPage> {
         child: ScrollConfiguration(
           behavior: HiddenScrollBehavior(),
           child: Form(
-            key: _formKey,
             child: ListView(
               children: <Widget>[
                 FlutterLogo(
@@ -58,34 +33,10 @@ class _RegisterPageState extends State<RegisterPage> {
                   autocorrect: false,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(labelText: 'Email'),
-                  validator: (val) {
-                    if (val!.isEmpty) {
-                      return 'Por favor ingrese un correo válido';
-                    } else {
-                      return null;
-                    }
-                  },
-                  onSaved: (val) {
-                    setState(() {
-                      var _email = val;
-                    });
-                  },
                 ),
                 TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(labelText: 'Password'),
-                  validator: (val) {
-                    if (val!.isEmpty) {
-                      return 'Por favor ingrese una contraseña correcta';
-                    } else {
-                      return null;
-                    }
-                  },
-                  onSaved: (val) {
-                    setState(() {
-                      var _password = val;
-                    });
-                  },
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
@@ -108,7 +59,7 @@ class _RegisterPageState extends State<RegisterPage> {
           onPressed: () {
             Navigator.of(context).pushNamed('/login');
           },
-          child: Text('Ya tengo cuenta'),
+          child: Text('Ya tengo una cuenta'),
         )
       ],
     );
