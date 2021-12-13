@@ -4,7 +4,7 @@ import 'settings.dart';
 import 'todos.dart';
 import 'todosArchive.dart';
 
-class MainTabs extends StatelessWidget {
+class MainTabsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
